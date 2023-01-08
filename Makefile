@@ -40,19 +40,15 @@ EXEC = ./a.out
 
 # Rules
 
-all: $(FT_PRINTF) $(SERVER) $(CLIENT)
+all: $(SERVER) $(CLIENT)
 
 $(SERVER): $(SERVER_OBJ) 
-			@make -C $(FT_PRINTF)
-			@cp $(FT_PRINTF)/$(FT_PRINTF_NAME) .
-			@mv $(FT_PRINTF_NAME) $(SERVER)
-			ar rcs $(SERVER_SRC) $(SERVER_OBJ)
+			cd ft_printf && make && mv libftprintf.a ../
+			$(CC) $(SERVER_OBJ) $(FT_PRINTF_NAME) -o server
 
 $(CLIENT): $(CLIENT_OBJ) 
-			@make -C $(FT_PRINTF)
-			@cp $(FT_PRINTF)/$(FT_PRINTF_NAME) .
-			@mv $(FT_PRINTF_NAME) $(CLIENT)
-			ar rcs $(CLIENT_SRC) $(CLIENT_OBJ)
+			cd ft_printf && make && mv libftprintf.a ../
+			$(CC) $(CLIENT_OBJ) $(FT_PRINTF_NAME) -o client
 
 %.o : %.c 
 		$(CC) $(CCFLAGS) -c $< -o $@
