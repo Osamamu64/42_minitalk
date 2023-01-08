@@ -20,6 +20,7 @@
 
 # define RED "\033[0;31m"
 # define GREEN "\033[0;32m"
+# define YELLOW "\e[0;33m"
 # define C_OFF "\033[0m"
 
 # define PID_MIN 1
