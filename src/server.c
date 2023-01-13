@@ -6,11 +6,12 @@
 /*   By: oelshare <oelshare@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 17:01:35 by oelshare          #+#    #+#             */
-/*   Updated: 2023/01/11 19:23:01 by oelshare         ###   ########.fr       */
+/*   Updated: 2023/01/13 21:28:29 by oelshare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../headers/minitalk.h"
+#include <stdio.h>
 
 static void	to_binary(int sign, siginfo_t *info, void *ptr)
 {
@@ -26,7 +27,7 @@ static void	to_binary(int sign, siginfo_t *info, void *ptr)
 	total_bits++;
 	if (total_bits == 8)
 	{
-		ft_printf(YELLOW "%c", bit);
+		ft_putchar(bit);
 		total_bits = 0;
 		bit = 0;
 	}
@@ -46,7 +47,7 @@ int	main(int argc, char **argv)
 	s_action.sa_sigaction = to_binary;
 	sigaction(SIGUSR1, &s_action, NULL);
 	sigaction(SIGUSR2, &s_action, NULL);
-	ft_printf(GREEN "\n\t\t 🤖 Welcome to تزينذتشنتسيزذنشyour server 🤖 \n\n" C_OFF, getpid());
+	ft_printf(GREEN "\n\t\t 🤖 Welcome to your server 🤖 \n\n" C_OFF);
 	ft_printf(GREEN "Your server PID: %u \n\nYour Message: " C_OFF, getpid());
 	while (1)
 		pause();

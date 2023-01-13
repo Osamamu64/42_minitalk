@@ -6,7 +6,7 @@
 #    By: oelshare <oelshare@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/07 19:14:44 by oelshare          #+#    #+#              #
-#    Updated: 2023/01/11 18:02:46 by oelshare         ###   ########.fr        #
+#    Updated: 2023/01/13 21:06:02 by oelshare         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,22 +72,22 @@ $(CLIENT_BONUS): $(CLIENT_BONUS_OBJ)
 		$(CC) $(CCFLAGS) -c $< -o $@
 
 clean:
-	@make clean -C $(FT_PRINTF)
-	@$(RM) $(CLIENT_OBJ) $(SERVER_OBJ)
+	@make clean -C  $(FT_PRINTF)
+	$(RM) $(CLIENT_OBJ) $(SERVER_OBJ)
 
 cleanb: 
 		@make clean -C $(FT_PRINTF)
-		@$(RM) $(CLIENT_BONUS_OBJ) $(SERVER_BONUS_OBJ)
+		$(RM) $(CLIENT_BONUS_OBJ) $(SERVER_BONUS_OBJ)
 
 fclean: clean
-	@$(RM) $(FT_PRINTF)/$(FT_PRINTF_NAME)
-	@$(RM) $(CLIENT_OBJ) $(SERVER_OBJ)
-	@$(RM) $(SERVER) $(CLIENT) $(FT_PRINTF_NAME)
+	$(RM) $(FT_PRINTF)/$(FT_PRINTF_NAME)
+	$(RM) $(CLIENT_OBJ) $(SERVER_OBJ)
+	$(RM) $(SERVER) $(CLIENT) $(FT_PRINTF_NAME)
 
 fcleanb: clean
-	@$(RM) $(FT_PRINTF)/$(FT_PRINTF_NAME)
-	@$(RM) $(CLIENT_BONUS_OBJ) $(SERVER_BONUS_OBJ)
-	@$(RM) $(SERVER_BONUS) $(CLIENT_BONUS) $(FT_PRINTF_NAME)
+	$(RM) $(FT_PRINTF)/$(FT_PRINTF_NAME)
+	$(RM) $(CLIENT_BONUS_OBJ) $(SERVER_BONUS_OBJ)
+	$(RM) $(SERVER_BONUS) $(CLIENT_BONUS) $(FT_PRINTF_NAME)
 
 re: fclean all
 
