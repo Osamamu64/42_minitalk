@@ -6,7 +6,7 @@
 /*   By: oelshare <oelshare@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:44:42 by oelshare          #+#    #+#             */
-/*   Updated: 2023/01/08 15:09:17 by oelshare         ###   ########.fr       */
+/*   Updated: 2023/01/11 14:29:25 by oelshare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <signal.h>
 # include <stdlib.h>
-# include "ft_printf/ft_printf.h"
-# include "ft_printf/libft/libft.h"
+# include "../ft_printf/ft_printf.h"
+# include "../ft_printf/libft/libft.h"
 
 # define RED "\033[0;31m"
 # define GREEN "\033[0;32m"
