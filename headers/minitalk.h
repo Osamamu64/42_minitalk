@@ -6,7 +6,7 @@
 /*   By: oelshare <oelshare@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:44:42 by oelshare          #+#    #+#             */
-/*   Updated: 2023/01/11 14:29:25 by oelshare         ###   ########.fr       */
+/*   Updated: 2023/01/14 21:22:28 by oelshare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@
 # define C_OFF "\033[0m"
 
 # define PID_MIN 1
-# define PID_MAX 99999
+# define PID_MAX 99998
 
 #endif
