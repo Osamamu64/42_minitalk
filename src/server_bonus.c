@@ -6,7 +6,7 @@
 /*   By: oelshare <oelshare@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 14:25:41 by oelshare          #+#    #+#             */
-/*   Updated: 2023/01/11 18:07:51 by oelshare         ###   ########.fr       */
+/*   Updated: 2023/01/14 16:38:54 by oelshare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static void	to_binary(int sign, siginfo_t *info, void *ptr)
 	total_bits++;
 	if (total_bits == 8)
 	{
-		ft_printf(YELLOW "%c", bit);
+		ft_putchar(bit);
 		total_bits = 0;
 		bit = 0;
 		kill(info->si_pid, SIGUSR1);
@@ -46,7 +46,8 @@ int	main(int argc, char **argv)
 	sa.sa_sigaction = to_binary;
 	sigaction(SIGUSR1, &sa, NULL);
 	sigaction(SIGUSR2, &sa, NULL);
-	ft_printf(GREEN "\n\t\t 🤖 Welcome to your server 🤖 \n\n" C_OFF, getpid());
+	ft_printf(GREEN
+		"\n\t\t 🤖 Welcome to your server 'BONUS' 🤖 \n\n" C_OFF, getpid());
 	ft_printf(GREEN "Your server PID: %u \n\nYour Message: " C_OFF, getpid());
 	while (1)
 		pause();

@@ -6,7 +6,7 @@
 /*   By: oelshare <oelshare@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 14:25:44 by oelshare          #+#    #+#             */
-/*   Updated: 2023/01/13 21:09:27 by oelshare         ###   ########.fr       */
+/*   Updated: 2023/01/14 17:46:56 by oelshare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,12 @@ static	void	args_check(int pid, char *str)
 			C_OFF, PID_MIN, PID_MAX);
 		exit(0);
 	}
-	if (!*str)
+	else if (kill(pid, 0) == -1)
+	{
+		ft_printf(RED "ERROR: Wrong PID number \n" C_OFF);
+		exit(0);
+	}
+	else if (!*str)
 	{
 		ft_printf(RED "ERROR: You must have a string" C_OFF);
 		exit(0);
