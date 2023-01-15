@@ -6,7 +6,7 @@
 /*   By: oelshare <oelshare@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 14:25:44 by oelshare          #+#    #+#             */
-/*   Updated: 2023/01/14 17:46:56 by oelshare         ###   ########.fr       */
+/*   Updated: 2023/01/15 16:24:41 by oelshare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,18 +70,6 @@ static void	acknowledger(int sign, siginfo_t *info, void *ptr)
 			"A message have been recived ✅ \n" C_OFF, sent_str);
 		exit(1);
 	}
-}
-
-static size_t	ft_strlen_count(const char *s)
-{
-	size_t		x;
-
-	x = 0;
-	while (s[x] != '\0' && s[x] != ' ')
-	{
-		x++;
-	}
-	return (x);
 }
 
 int	main(int argc, char **argv)
